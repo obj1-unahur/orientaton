@@ -1,0 +1,30 @@
+import wollok.game.*
+import personaje.*
+import cosas.*
+import pantalla.*
+
+program juego {
+	game.title("Cursar Materia")
+  	game.width(tablero.ancho())
+  	game.height(tablero.alto())
+	game.cellSize(64)
+	game.ground("piso.png")
+
+	//PERSONAJE Y COSAS
+	game.addVisualCharacter(alumno) // se mueve con las flechas
+    game.addVisual(parcial)
+	game.addVisual(desaprobado)
+  	game.addVisual(marcador) 
+    game.addVisual(cartelMision) 
+	
+	//Cuando el alumno choca con algun otro objeto:
+	game.onCollideDo(alumno, {algo => algo.chocar(alumno)})
+
+	//TECLADO
+	keyboard.h().onPressDo { alumno.saludar() }
+
+	// EL 2 TE PERSIGUE (cada 700 milisegundos da un paso hacia el alumno)
+	game.onTick(700, "2 se mueve", { desaprobado.perseguir(alumno) })
+
+	game.start()
+}
