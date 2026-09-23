@@ -12,10 +12,10 @@ program juego {
 
 	//PERSONAJE Y COSAS
 	game.addVisualCharacter(alumno) // se mueve con las flechas
-  game.addVisual(parcial)
+    game.addVisual(parcial)
 	game.addVisual(desaprobado)
 	game.addVisual(marcador) 
-  game.addVisual(cartelMision)
+    game.addVisual(cartelMision)
 	
 	//Cuando el alumno choca con algun otro objeto:
 	game.onCollideDo(alumno, {algo => algo.chocar(alumno)})

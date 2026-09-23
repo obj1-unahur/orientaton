@@ -1,5 +1,6 @@
 object desaprobado {
   var property position = game.at(11, 6)
+  var property dialogo=""
 
   method image() = "reprobado.png"
 
@@ -8,14 +9,20 @@ object desaprobado {
     // Cada línea es una opción. Las que empiezan con // están APAGADAS (fijate que estan en gris)
     // Para prender una, borrale las dos barras //. Para apagarla, volvé a ponerlas.
     // ¡Podés prender varias a la vez!
-    // >>> Después apretá Ctrl + Shift + B para volver a jugar y ver el cambio <<<
-
+    // >>> Después anda a "miJuego.wpg," y apretá "Run programa". Volvé al juego y presiona Actualizar para seguir jugando <<<
+  
     alguien.volverAlInicio()                    // A: volvés a la entrada
     //alguien.perderUnaMateria()                // B: perdés una materia
     //position = tablero.lugarAlAzar()          // C: el parcial se teletransporta
-    //game.say(self, "¡Sorpresa! ¡Parcial!")    // D: el parcial te habla
+    //self.hablar("¡Sorpresa! ¡Parcial!")    // D: el parcial te habla
+
 
     // ==========================================================================
+  }
+
+  method hablar(texto){
+    dialogo= texto
+    saludoD.aparecer()
   }
 
   // ---- De acá para abajo no hace falta tocar nada ----
@@ -55,4 +62,19 @@ object tablero {
     0.randomUpTo(self.ancho()).truncate(0),
     0.randomUpTo(self.alto() - 1).truncate(0)
   )
+}
+
+
+object saludoD{
+  var property position = game.origin()
+
+  method image() = "saludo.png"
+
+  method text() = desaprobado.dialogo()
+
+  method aparecer(){
+    position = game.at(desaprobado.position().x()+1, desaprobado.position().y()+1)
+    game.addVisual(self)
+    game.schedule(1000, { game.removeVisual(self) })
+  }
 }

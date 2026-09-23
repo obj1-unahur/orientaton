@@ -29,7 +29,7 @@ object misiones {
   method mision() =
     if (alumno.image() == "estudiante_rojo.png")
       "MISIÓN 1: cambiale la ropa a tu personaje\nAbrí estudiante.wlk y buscá MISIÓN 1"
-    else if (alumno.saludo() == "Hola")
+    else if (alumno.dialogo() == "Hola")
       "¡Bien! MISIÓN 2: hacé que tu personaje diga otra cosa\nAbrí estudiante.wlk y buscá MISIÓN 2 (probalo con la H)"
     else if (alumno.materiasParaRecibirse() == 5)
       "¡Bien! MISIÓN 3: cambiá cuántas materias necesitás para recibirte\nAbrí estudiante.wlk y buscá MISIÓN 3"

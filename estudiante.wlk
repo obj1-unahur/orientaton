@@ -14,14 +14,14 @@ object alumno {
   // ================= MISIÓN 2: ¿qué dice tu personaje? ==========
   // Escribí lo que quieras entre las comillas.
   // En el juego, apretá la tecla h para escucharlo.
-  method saludo() = "Hola"
+  var dialogo = "Hola"
   // >>> Después anda a "miJuego.wpg," y apretá "Run programa". Volvé al juego y presiona Actualizar para seguir jugando <<<
   // ==============================================================
 
 
   // ================= MISIÓN 3: ¿cuántas materias para recibirte? =
   // Cambiá el número. ¿Qué pasa si ponés 1? ¿Y 100?
-  method materiasParaRecibirse() = 3
+  method materiasParaRecibirse() = 5
   // >>> Después anda a "miJuego.wpg," y apretá "Run programa". Volvé al juego y presiona Actualizar para seguir jugando <<<
   // ==============================================================
 
@@ -30,6 +30,9 @@ object alumno {
 
   method materias() = materias
 
+  method dialogo() = dialogo
+  
+  //metodo que se ejecuta cuando se apreta h
   method saludar() {
     saludo.aparecer()    
   }
@@ -43,7 +46,8 @@ object alumno {
 
   method recibirse() {
     recibido = true
-    game.say(self, "¡ME RECIBÍ!")
+    dialogo="¡ME RECIBÍ!"
+    saludo.aparecer()
     game.removeTickEvent("2 se mueve")
   }
 
@@ -66,7 +70,7 @@ object saludo{
 
   method image() = "saludo.png"
 
-  method text() = alumno.saludo()
+  method text() = alumno.dialogo()
 
   method aparecer(){
     position = game.at(alumno.position().x()+1, alumno.position().y()+1)
