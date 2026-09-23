@@ -5,19 +5,17 @@ object desaprobado {
   method image() = "reprobado.png"
 
   method chocar(alguien) {
-    // ============ MISIÓN 4: ¿qué pasa cuando te agarra un parcial? ============
-    // Cada línea es una opción. Las que empiezan con // están APAGADAS (fijate que estan en gris)
+    // ============ MISIÓN 4: ¿qué pasa cuando te agarra un parcial/el 2? ============
+
+    // Cada línea es una opción. Las que empiezan con // están APAGADAS (en gris).
     // Para prender una, borrale las dos barras //. Para apagarla, volvé a ponerlas.
     // ¡Podés prender varias a la vez!
-    // >>> Después anda a "miJuego.wpg," y apretá "Run programa". Volvé al juego y presiona Actualizar para seguir jugando <<<
+    // >>> Después andá a "miJuego.wpgm" y apretá "Run program". Volvé al juego y presioná Actualizar para seguir jugando <<<
   
     alguien.volverAlInicio()                    // A: volvés a la entrada
     //alguien.perderUnaMateria()                // B: perdés una materia
     //position = tablero.lugarAlAzar()          // C: el parcial se teletransporta
-    //self.hablar("¡Sorpresa! ¡Parcial!")    // D: el parcial te habla
-
-
-    // ==========================================================================
+    //self.hablar("¡Sorpresa! ¡Parcial!")       // D: el parcial te habla
   }
 
   method hablar(texto){
@@ -63,8 +61,6 @@ object tablero {
     0.randomUpTo(self.alto() - 1).truncate(0)
   )
 }
-
-
 object saludoD{
   var property position = game.origin()
 

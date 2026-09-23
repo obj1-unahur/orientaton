@@ -24,7 +24,7 @@ object cartelMision {
 // El juego se da cuenta solo de qué misiones ya hiciste,
 // mirando si cambiaste el código. Por eso hay que volver a correrlo.
 object misiones {
-  method actual() = self.mision() + "\n>>> Cuando la hagas presiona 'Run program' en miJuego.wpgm para volver a jugar <<<"
+  method actual() = self.mision() + "\n>>> Cuando la hagas presioná 'Run program' en miJuego.wpgm para volver a jugar <<<"
 
   method mision() =
     if (alumno.image() == "estudiante_rojo.png")
@@ -34,5 +34,5 @@ object misiones {
     else if (alumno.materiasParaRecibirse() == 5)
       "¡Bien! MISIÓN 3: cambiá cuántas materias necesitás para recibirte\nAbrí estudiante.wlk y buscá MISIÓN 3"
     else
-      "¡Bien! MISIÓN 4: ¿qué pasa cuando te agarra un alcanza el 2 ?\nAbrí cosas.wlk y buscá MISIÓN 4"
+      "¡Bien! MISIÓN 4: ¿qué pasa cuando te alcanza el 2?\nAbrí cosas.wlk y buscá MISIÓN 4"
 }

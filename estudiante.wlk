@@ -7,24 +7,23 @@ object alumno {
   // Colores que hay: rojo, azul, verde, violeta, amarillo
   // Cambiá la palabra "rojo" por otro color. ¡Dejá las comillas!
   method image() = "estudiante_rojo.png"
-  // >>> Después anda a "miJuego.wpg," y apretá "Run programa". Volvé al juego y presiona Actualizar para seguir jugando <<<
+  // >>> Después andá a "miJuego.wpgm" y apretá "Run program". Volvé al juego y presioná Actualizar para seguir jugando <<<
   // ==============================================================
 
 
   // ================= MISIÓN 2: ¿qué dice tu personaje? ==========
   // Escribí lo que quieras entre las comillas.
-  // En el juego, apretá la tecla h para escucharlo.
+  // En el juego, apretá la tecla H para escucharlo.
   var dialogo = "Hola"
-  // >>> Después anda a "miJuego.wpg," y apretá "Run programa". Volvé al juego y presiona Actualizar para seguir jugando <<<
+  // >>> Después andá a "miJuego.wpgm" y apretá "Run program". Volvé al juego y presioná Actualizar para seguir jugando <<<
   // ==============================================================
 
 
   // ================= MISIÓN 3: ¿cuántas materias para recibirte? =
   // Cambiá el número. ¿Qué pasa si ponés 1? ¿Y 100?
   method materiasParaRecibirse() = 5
-  // >>> Después anda a "miJuego.wpg," y apretá "Run programa". Volvé al juego y presiona Actualizar para seguir jugando <<<
+  // >>> Después andá a "miJuego.wpgm" y apretá "Run program". Volvé al juego y presioná Actualizar para seguir jugando <<<
   // ==============================================================
-
 
 // ---- De acá para abajo no hace falta tocar nada ----
 
