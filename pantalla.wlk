@@ -1,5 +1,5 @@
 import wollok.game.*
-import personaje.*
+import estudiante.*
 import cosas.*
 
 // Carteles que se ven en la fila de arriba. No hace falta tocar este archivo.

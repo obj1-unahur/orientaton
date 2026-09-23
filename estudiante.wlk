@@ -21,7 +21,7 @@ object alumno {
 
   // ================= MISIÓN 3: ¿cuántas materias para recibirte? =
   // Cambiá el número. ¿Qué pasa si ponés 1? ¿Y 100?
-  method materiasParaRecibirse() = 5
+  method materiasParaRecibirse() = 3
   // >>> Después anda a "miJuego.wpg," y apretá "Run programa". Volvé al juego y presiona Actualizar para seguir jugando <<<
   // ==============================================================
 
@@ -31,7 +31,7 @@ object alumno {
   method materias() = materias
 
   method saludar() {
-    game.say(self, self.saludo())
+    saludo.aparecer()    
   }
 
   method aprobar() {
@@ -55,6 +55,22 @@ object alumno {
     materias = (materias - 1).max(0)
   }
 
+  method moverAbajo(){
+    position = self.position().down(1)
+  }
  
 }
 
+object saludo{
+  var property position = game.origin()
+
+  method image() = "saludo.png"
+
+  method text() = alumno.saludo()
+
+  method aparecer(){
+    position = game.at(alumno.position().x()+1, alumno.position().y()+1)
+    game.addVisual(self)
+    game.schedule(1000, { game.removeVisual(self) })
+  }
+}

@@ -11,9 +11,9 @@ object desaprobado {
     // >>> Después apretá Ctrl + Shift + B para volver a jugar y ver el cambio <<<
 
     alguien.volverAlInicio()                    // A: volvés a la entrada
-    //game.say(self, "¡Sorpresa! ¡Parcial!")    // B: el parcial te habla
-    //alguien.perderUnaMateria()                // C: perdés una materia
-    //position = tablero.lugarAlAzar()          // D: el parcial se teletransporta
+    //alguien.perderUnaMateria()                // B: perdés una materia
+    //position = tablero.lugarAlAzar()          // C: el parcial se teletransporta
+    //game.say(self, "¡Sorpresa! ¡Parcial!")    // D: el parcial te habla
 
     // ==========================================================================
   }
